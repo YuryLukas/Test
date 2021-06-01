@@ -1,35 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Test
 {
     class Persona
     {
-        private String name;
-        private String surname;
+        private String name="";
+        private String surname="";
+        public Persona()
+        {
 
-
-        void setName(String name)
+        }
+        public Persona(String name, String surname)
+        {
+            this.name = name;
+            this.surname = surname;
+        }
+        public void setName(String name)
         {
             this.name = name;
         }
-
-        String getName()
+        public String getName()
         {
             return this.name;
         }
-
-        void setSurname(String surname)
+        public void setSurname(String surname)
         {
             this.surname = surname;
         }
-
-        String getSurname()
+        public String getSurname()
         {
             return surname;
+        }
+        public void output()
+        {
+            Console.WriteLine(this.name + " " + this.surname);
         }
     }
 }
